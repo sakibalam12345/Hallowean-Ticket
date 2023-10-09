@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 const Tickets = () => {
     return (
         <div>
-            <Navbar></Navbar>
+           
             <div className="bg-[#720A4C] pt-10 text-center text-white">
                 <h1 className="text-3xl font-semibold">Get your</h1>
                 <p className="text-6xl font-bold">Tickets</p>

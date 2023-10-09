@@ -1,11 +1,44 @@
-import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 
 const About = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <h2>this is a bout page</h2>
+            
+            <div className="text-center bg-[#720A4C]  pt-10">
+                <h3 className="text-2xl font-semibold ">What it is all</h3>
+                <h1 className="text-9xl text-white font-extrabold">About</h1>
+                <div className="flex justify-center items-center">
+                <img className="w-[500px]" src="https://i.ibb.co/8j2Q0Ch/hero-01.png" alt="" />
+                </div>
+                <div className="text-white flex justify-center items-center gap-32 pb-10">
+                    <div>
+                    <h1 className="text-xl font-semibold">Attention please... <br />
+ <span className="text-9xl font-extrabold text-orange-400">! Not your <br /> Classic <br /> Halloween <br /> p a r t y !</span>
+</h1>
+                    </div>
+                    <div>
+                        <img className="w-[600px] rounded-lg" src="https://i.ibb.co/TPs9KtY/gallery-04.jpg" alt="" />
+                    </div>
+
+                </div>
+            </div>
+            <div className="text-center relative bg-[#720A4C] ">
+                <h1 className="text-3xl font-medium">Halloween Madness</h1>
+                <p className="text-[100px] font-bold">Come join the </p>
+                <p className="text-[200px] font-bold "> party!</p>
+            </div>
+            <Link to='/tickets'>
+            <div className="flex items-center justify-center absolute -mt-28 ml-[700px] ">
+                <div className="bg-orange-400  w-24 h-24 rounded-full">
+                   
+                <p className="font-medium ml-8 pt-4">Get a</p>
+                <p className="font-bold text-3xl ml-2 mt-1"> Ticket</p>
+                </div>
+              
+            </div>  
+                    </Link>
+           
         </div>
     );
 };

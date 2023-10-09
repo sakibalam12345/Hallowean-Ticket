@@ -10,7 +10,7 @@ const Home = () => {
    
     return (
         <div>
-            <Navbar></Navbar>
+            
             <Banner></Banner>
             <div className="text-center bg-[#720A4C] text-white">
                 <h1  className="text-6xl font-bold mb-4">ABOUT</h1>
