@@ -15,7 +15,6 @@ const Cards = ({card}) => {
         <Link>
         <button className="px-3  border-none bg-[#8E136D] text-white font-bold text-xl  py-2 rounded-md">Show Details</button>
         </Link>
-     
     </div>
   </div>
 </div>
