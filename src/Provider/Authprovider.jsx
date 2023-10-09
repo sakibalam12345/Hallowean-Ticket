@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GithubAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
 
 
 export const Authcontext = createContext(null);
 const auth = getAuth(app);
+
+const githubprovider = new GithubAuthProvider();
 
 const Authprovider = ({children}) => {
 
@@ -26,6 +28,11 @@ const Authprovider = ({children}) => {
         setloading(true)
         return signOut(auth)
     }
+
+    const githublogin = ()=>{
+        setloading(true)
+        return signInWithPopup(auth,githubprovider)
+    }
    useEffect(()=>{
   const unsubscribe =  onAuthStateChanged(auth, currentuser =>{
     console.log('on chane', currentuser)
@@ -39,7 +46,7 @@ const Authprovider = ({children}) => {
   },[])
 
 
-    const authinfo= {user,createuser,login,logout,loading}
+    const authinfo= {user,createuser,login,logout,loading,githublogin}
     return (
         <Authcontext.Provider value={authinfo}>
             {children}

@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Provider/Authprovider";
-import { Result } from "postcss";
+import { FaGithub} from 'react-icons/fa';
+
 
 
 const Login = () => {
@@ -9,7 +10,20 @@ const Login = () => {
     const location = useLocation();
     const Navigate = useNavigate();
 
-    const {login} = useContext(Authcontext)
+    const {login,githublogin} = useContext(Authcontext);
+
+    const handlegithublogin = ()  =>{
+      
+        githublogin()
+        .then(result=>{
+            console.log(result.user)
+            Navigate('/')
+        })
+        .catch(error=>{
+            console.error(error)
+        })
+
+    }
 
     const handlelogin = e =>{
         e.preventDefault();
@@ -20,14 +34,16 @@ const Login = () => {
 
         login(email,password)
         .then(result=>{
-            console.log(result.user)
-
+            
             Navigate(location?.state ? location.state : '/')
+            
 
         } )
         .catch(error=>{
             console.error(error)
         })
+
+      
 
 
 
@@ -62,9 +78,18 @@ const Login = () => {
         </div>
       </form>
       <p className="text-center pb-5">Do not have an account? please <Link to='/registration' className="text-red-500"> Registration</Link></p>
+      <div>
+        <button onClick={handlegithublogin}>
+        <p className="text-center pb-4 flex justify-center items-center gap-2 ml-32">Login with github <FaGithub></FaGithub> </p>
+        </button>
+      
+      </div>
     </div>
+    
   </div>
+ 
 </div>
+
         </div>
     );
 };

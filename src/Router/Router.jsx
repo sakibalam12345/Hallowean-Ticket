@@ -7,6 +7,7 @@ import Carddetails from "../Pages/Carddetails/Carddetails";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import Privateroute from "../Privateroute/Privateroute";
+import Errorpage from "../Error/Errorpage";
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     {
         path : '/',
         element : <Root></Root>,
+        errorElement : <Errorpage></Errorpage>,
         children : [
             {
                 path : '/',

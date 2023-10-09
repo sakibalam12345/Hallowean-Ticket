@@ -44,17 +44,6 @@ const Navbar = () => {
      </li>
      <li>
      <NavLink
-                    to='/program'
-                    className={({ isActive }) =>
-                      isActive && 'underline text-white' 
-                        
-                    }
-                  >
-                   <p className="text-xl  font-medium">PROGRAM</p>
-                  </NavLink>
-     </li>
-     <li>
-     <NavLink
                     to='/about'
                     className={({ isActive }) =>
                       isActive && 'underline text-white' 
