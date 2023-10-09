@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
-import Navbar from "./Navbar/Navbar";
+
 import Cards from "./Cards/Cards";
 
 

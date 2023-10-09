@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../../Provider/Authprovider";
 
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
-    const {createuser,user} = useContext(Authcontext)
+
+  
+    const {createuser} = useContext(Authcontext);
     const handleregistration = e =>{
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -17,7 +20,9 @@ const Registration = () => {
 
         createuser(email,password)
         .then(result=>{
-            console.log(result.user)
+            console.log(result.user);
+
+
         })
         .catch(error=>{
             console.error(error)
@@ -68,7 +73,9 @@ const Registration = () => {
     </div>
   </div>
 </div>
+
         </div>
+        
     );
 };
 
