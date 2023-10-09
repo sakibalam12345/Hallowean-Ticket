@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "category": "Flair Cocktails",
+      "image": "https://i.ibb.co/PMzYLrL/icon-01.png",
+      "category_details": "Flair Cocktails is an artful and entertaining style of bartending that involves the use of various techniques to create visually appealing and impressive cocktails. Bartenders who specialize in flair cocktails are known for their skill in juggling bottles, shakers, and other bar tools while preparing drinks. This style of bartending adds a unique and exciting element to any cocktail event or bar experience."
+    },
+    {
+      "id": 2,
+      "category": "Halloween Treats",
+      "image": "https://i.ibb.co/PmVQJ0g/icon-03.png",
+      "category_details": "Halloween treats are a delightful and spooky part of Halloween celebrations. These treats come in various forms, from candies and chocolates to baked goods and themed snacks. They are an essential part of trick-or-treating, Halloween parties, and gatherings."
+    },
+    {
+      "id": 3,
+      "category": "Ghost Dance",
+      "image": "https://i.ibb.co/Nyf9xMX/icon-02.png",
+      "category_details": "Ghost dance is a traditional Native American spiritual dance that holds deep cultural and historical significance. This sacred dance has been practiced by various indigenous tribes for generations and plays a vital role in their traditions and ceremonies."
+    },
+    {
+      "id": 4,
+      "category": "Scary Activities",
+      "image": "https://i.ibb.co/2WSJD5y/icon-04.png",
+      "category_details": "Scary activities are a thrilling way to embrace fear and excitement, especially during the Halloween season. These activities are designed to create a sense of suspense, anticipation, and adrenaline rush. They often involve elements of horror, mystery, and the supernatural, making them perfect for those who enjoy a good scare."
+    },
+    {
+      "id": 5,
+      "category": "Host a Night Game",
+      "image": "https://i.ibb.co/hRCchWM/images.jpg",
+      "category_details": "Hosting a night game is an exciting way to bring friends and family together for an evening of entertainment and competition. Night games are typically played in the dark or low-light settings, adding an element of mystery and adventure to the experience. They can be a perfect addition to gatherings, parties, or outdoor events."
+    },
+    {
+      "id": 6,
+      "category": "Costume Fashion Show",
+      "image": "https://i.ibb.co/25WFT1M/happy-halloween-party-with-cartoon-character-in-halloween-costume-flat-icon-design-illustration-vect.jpg",
+      "category_details": "Costume Fashion Show is a showcase of creative and stylish outfits. It allows individuals to express their unique fashion sense by wearing costumes that reflect their personality, interests, or imagination."
+    }
+  ]
+  
