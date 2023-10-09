@@ -17,7 +17,7 @@ const Home = () => {
                 <p className="text-2xl font-medium text-orange-500">Party Location</p>
                 <p className="text-2xl font-medium mb-4">2415 Gordon St, New Orleans LA 70123</p>
                 <p className="text-2xl font-medium mb-3">Halloween, celebrated on October 31st, is a spooky and festive holiday with deep historical roots. It originated from ancient Celtic traditions, particularly the festival of Samhain, marking the end of the harvest season and the beginning of winter.</p>
-                <Link><button className="bg-[#8E136D]  text-white font-bold text-xl px-2 py-1 rounded-md mb-5">Read More</button></Link>
+                <Link to='/about'><button className="bg-[#8E136D]  text-white font-bold text-xl px-2 py-1 rounded-md mb-5">Read More</button></Link>
             </div>
             <div className="grid grid-cols-3 gap-10 pt-20 pb-10 bg-[#720A4C]">
                 {
@@ -39,6 +39,7 @@ const Home = () => {
                  <div className="bg-[#720A4C] pb-12">
                     <h3 className="text-3xl font-semibold text-center pt-10">Get your</h3>
                     <p className="text-6xl font-semibold text-center">Tickets</p>
+
                     <div className="flex justify-center items-center gap-5 mt-10">
                     <div className="card w-96 bg-base-100 shadow-xl">
  
@@ -47,7 +48,7 @@ const Home = () => {
     <p className="text-5xl font-extrabold"> $45 </p>
     <p>Capture memorable moments, explore at your leisure, and create your unique memories during your visit</p>
     <div className="card-actions justify-center">
-      <Link>
+      <Link to='/tickets'>
       <button className="px-3  border-none bg-[#8E136D] text-white font-bold text-xl  py-2 rounded-md">Order Ticket</button>
       </Link>
     
@@ -61,7 +62,7 @@ const Home = () => {
     <p className="text-5xl font-extrabold"> $75 </p>
     <p>Capture memorable moments, explore at your leisure, and create your unique memories during your visit</p>
     <div className="card-actions justify-center">
-      <Link>
+      <Link to='/tickets'>
       <button className="px-3  border-none bg-[#8E136D] text-white font-bold text-xl  py-2 rounded-md">Order Ticket</button>
       </Link>
     
@@ -75,7 +76,7 @@ const Home = () => {
     <p className="text-5xl font-extrabold"> $95 </p>
     <p>Capture memorable moments, explore at your leisure, and create your unique memories during your visit</p>
     <div className="card-actions justify-center">
-      <Link>
+      <Link to='/tickets'>
       <button className="px-3  border-none bg-[#8E136D] text-white font-bold text-xl  py-2 rounded-md ">Order Ticket</button>
       </Link>
     

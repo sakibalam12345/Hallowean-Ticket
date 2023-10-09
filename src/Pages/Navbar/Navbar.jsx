@@ -8,40 +8,40 @@ const Navbar = () => {
      <NavLink
                     to='/'
                     className={({ isActive }) =>
-                      isActive && 'underline text-orange-600' 
+                      isActive && 'underline  text-white' 
                         
                     }
                   >
-                   <p className="text-xl font-medium">HOME</p>
+                   <p className="text-xl  font-medium">HOME</p>
                   </NavLink>
      </li>
      <li>
      <NavLink
                     to='/tickets'
                     className={({ isActive }) =>
-                      isActive && 'underline text-orange-600' 
+                      isActive && 'underline text-white' 
                         
                     }
                   >
-                   <p className="text-xl font-medium">TICKETS</p>
+                   <p className="text-xl  font-medium">TICKETS</p>
                   </NavLink>
      </li>
      <li>
      <NavLink
                     to='/program'
                     className={({ isActive }) =>
-                      isActive && 'underline text-orange-600' 
+                      isActive && 'underline text-white' 
                         
                     }
                   >
-                   <p className="text-xl font-medium">PROGRAM</p>
+                   <p className="text-xl  font-medium">PROGRAM</p>
                   </NavLink>
      </li>
      <li>
      <NavLink
                     to='/about'
                     className={({ isActive }) =>
-                      isActive && 'underline text-orange-600' 
+                      isActive && 'underline text-white' 
                         
                     }
                   >
@@ -52,11 +52,11 @@ const Navbar = () => {
      <NavLink
                     to='/login'
                     className={({ isActive }) =>
-                      isActive && 'underline text-orange-600' 
+                      isActive && 'underline text-white' 
                         
                     }
                   >
-                   <p className="text-xl font-medium">LOGIN</p>
+                   <p className="text-xl  font-medium">LOGIN</p>
                   </NavLink>
      </li>
      
@@ -64,11 +64,11 @@ const Navbar = () => {
     
     </>
     return (
-        <div>
-            <h1 className="text-3xl fon text-center mt-2">HalloWeen</h1>
-            <h3 className="text-xl font-semibold text-center">P a r t y</h3>
+        <div className="bg-[#720A4C]">
+            <h1 className="text-3xl fon text-center pt-4 text-white">HalloWeen</h1>
+            <h3 className="text-xl font-semibold text-center text-white">P a r t y</h3>
             <div>
-            <div className="navbar bg-base-100 mb-20">
+            <div className="navbar  bg-[#720A4C]">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
