@@ -5,6 +5,8 @@ import Tickets from "../Pages/Tickets/Tickets";
 import About from "../Pages/About/About";
 import Carddetails from "../Pages/Carddetails/Carddetails";
 import Login from "../Pages/Login/Login";
+import Registration from "../Pages/Registration/Registration";
+import Privateroute from "../Privateroute/Privateroute";
 
 
 const router = createBrowserRouter([
@@ -28,12 +30,16 @@ const router = createBrowserRouter([
             },
             {
                 path : '/carddetails/:id',
-                element : <Carddetails></Carddetails>,
+                element :<Privateroute><Carddetails></Carddetails></Privateroute>    ,
                 loader : ()=> fetch('/maincard.json')
             },
             {
                 path : '/login',
                 element: <Login></Login>
+            },
+            {
+                path : '/registration',
+                element : <Registration></Registration>
             }
            
 
