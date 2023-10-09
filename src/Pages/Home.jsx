@@ -19,7 +19,7 @@ const Home = () => {
                 <p className="text-2xl font-medium mb-3">Halloween, celebrated on October 31st, is a spooky and festive holiday with deep historical roots. It originated from ancient Celtic traditions, particularly the festival of Samhain, marking the end of the harvest season and the beginning of winter.</p>
                 <Link to='/about'><button className="bg-[#8E136D]  text-white font-bold text-xl px-2 py-1 rounded-md mb-5">Read More</button></Link>
             </div>
-            <div className="grid grid-cols-3 gap-10 pt-20 pb-10 bg-[#720A4C]">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-10 md:gap-5 gap-3 pt-20 pb-10 bg-[#720A4C]">
                 {
                     allcards.map(singlecard => <Cards key={singlecard.id} card={singlecard}></Cards> )
                 }
@@ -27,7 +27,7 @@ const Home = () => {
             <div className="bg-[#720A4C]">
                 <h1 className= 'text-3xl font-semibold pt-10 text-white text-center'>Our photo</h1>
                 <p className='text-7xl font-extrabold text-white text-center pb-16'>Gallery</p>   
-                <div  className="grid grid-cols-3 gap-6 ml-20 ">
+                <div  className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-6 ml-20 md:mr-20 md:gap-3 mr-20 gap-3">
                   <img className="w-[400px] h-96 rounded-lg " src="https://i.ibb.co/RHBt6tv/gallery-03.jpg" alt="" />
                   <img className="w-[400px] h-96 rounded-lg" src="https://i.ibb.co/2FqP8Tz/gallery-06.jpg" alt="" />
                   <img className="w-[400px] h-96 rounded-lg" src="https://i.ibb.co/6mtk3Qs/gallery-01.jpg" alt="" />
@@ -40,7 +40,7 @@ const Home = () => {
                     <h3 className="text-3xl font-semibold text-center pt-10">Get your</h3>
                     <p className="text-6xl font-semibold text-center">Tickets</p>
 
-                    <div className="flex justify-center items-center gap-5 mt-10">
+                    <div className=" lg:flex justify-center items-center md:flex ml-5 md:gap-3  lg:gap-5 mt-10">
                     <div className="card w-96 bg-base-100 shadow-xl">
  
   <div className=" card-body items-center text-center bg-gradient-to-b from-rose-100 to-rose-900 ">

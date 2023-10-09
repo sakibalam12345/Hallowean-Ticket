@@ -9,13 +9,13 @@ const Tickets = () => {
             <div className="bg-[#720A4C] pt-10 text-center text-white">
                 <h1 className="text-3xl font-semibold">Get your</h1>
                 <p className="text-6xl font-bold">Tickets</p>
-                <div className="flex justify-center items-center">
+                <div className="flex  justify-center items-center">
                 <img className="w-[500px]" src="https://i.ibb.co/8j2Q0Ch/hero-01.png" alt="" />
                 </div>
             </div>
             <div className="bg-[#720A4C] pb-20">
                 <h1 className="text-center font-bold text-5xl">Ticket Categories</h1>
-                <div className="flex justify-center items-center gap-5 mt-10">
+                <div className="lg:flex md:flex ml-5 justify-center items-center gap-5 mt-10">
                     <div className="card w-96 h-96 bg-base-100 shadow-xl">
  
   <div className=" card-body rounded-lg items-center text-center bg-gradient-to-b from-rose-100 to-rose-900 ">
