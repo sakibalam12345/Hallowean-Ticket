@@ -1,10 +1,18 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState,} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Provider/Authprovider";
+import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
+
+
 const Registration = () => {
+
+  const navigate = useNavigate();
+
+  const [regisuccess,setregisuccess] = useState('');
+  const [regierror,setregierror] = useState('');
 
   
     const {createuser} = useContext(Authcontext);
@@ -17,15 +25,22 @@ const Registration = () => {
         const password = form.get('password');
 
         console.log(name,photo,email,password)
+        if(password.length < 6){
+          setregierror(toast('password is less than 6 words'))
+          return;
+        }
 
         createuser(email,password)
         .then(result=>{
+          setregisuccess(toast('registration successful'))
             console.log(result.user);
+           navigate('/')
 
 
         })
         .catch(error=>{
-            console.error(error)
+            console.error(error);
+            setregierror(toast(error.message))
         })
 
 
@@ -73,7 +88,7 @@ const Registration = () => {
     </div>
   </div>
 </div>
-
+<ToastContainer></ToastContainer>
         </div>
         
     );

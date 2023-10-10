@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Provider/Authprovider";
 import { FaGithub} from 'react-icons/fa';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
 
 
 
 const Login = () => {
+  const [loginsuccess,setloginsuccess] = useState('');
+  const [loginerror,setloginerror] = useState('');
 
     const location = useLocation();
     const Navigate = useNavigate();
@@ -17,10 +21,12 @@ const Login = () => {
         githublogin()
         .then(result=>{
             console.log(result.user)
+            setloginerror(toast('login successfully'))
             Navigate('/')
         })
         .catch(error=>{
-            console.error(error)
+            console.error(error);
+            setloginerror(toast(error.message))
         })
 
     }
@@ -34,19 +40,14 @@ const Login = () => {
 
         login(email,password)
         .then(result=>{
-            
+          setloginsuccess(toast('login successfully'))
             Navigate(location?.state ? location.state : '/')
             
-
         } )
         .catch(error=>{
             console.error(error)
+            setloginerror(toast(error.message))
         })
-
-      
-
-
-
 
     } 
     return (

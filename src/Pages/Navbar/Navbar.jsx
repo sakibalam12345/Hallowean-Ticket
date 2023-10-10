@@ -1,17 +1,25 @@
-import { useContext } from "react";
+import { useContext, useState, } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../../Provider/Authprovider";
 
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+
+
 const Navbar = () => {
+  const [logoutsuccess,setlogoutsuccess] = useState('')
 
 const {user,logout} = useContext(Authcontext);
     
 
+
     const handlelogout = ()=>{
-        
+
         logout()
         .then(result=>{
+          setlogoutsuccess(toast('logout successfully'))
             console.log(result.user)
+            
         })
         .catch(error=>{
             console.error(error)
@@ -92,14 +100,16 @@ const {user,logout} = useContext(Authcontext);
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="w-10 rounded-full">
-        
-        </div>
+ 
         {
             user ? 
             <>
-              <img className="mr-4" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              <p>{user.displayName}</p>
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+         <div className="w-10 rounded-full">
+          <img src={user.photoURL} />
+         </div>
+         </label> 
+              <p className="text-white ml-1 mr-1">{user.displayName}</p> 
               <p> <button onClick={handlelogout} className="bg-[#8E136D]  text-white font-bold text-xl px-2 py-1 rounded-md mr-2">Login out</button></p>
             </>
             
