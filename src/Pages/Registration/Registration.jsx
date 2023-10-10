@@ -26,9 +26,18 @@ const Registration = () => {
 
         console.log(name,photo,email,password)
         if(password.length < 6){
-          setregierror(toast('password is less than 6 words'))
+          setregierror(toast('password should be more than 6 words'))
           return;
         }
+
+      else if(!/[A-Z]/.test(password)){
+        setregierror(toast('password should be 1 capital letter'))
+        return;
+      }
+     else if(!/[@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+/.test(password)){
+      setregierror(toast('password should be 1 special character'))
+      return;
+     }
 
         createuser(email,password)
         .then(result=>{

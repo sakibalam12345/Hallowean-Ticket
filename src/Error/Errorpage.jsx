@@ -3,7 +3,7 @@
 const Errorpage = () => {
     return (
         <div className="flex justify-center items-center">
-            <h1 className=" text-5xl font-bold"> Opps</h1>
+            <h1 className=" text-5xl font-bold">Not Found page</h1>
         </div>
     );
 };

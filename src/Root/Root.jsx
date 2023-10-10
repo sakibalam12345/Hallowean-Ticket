@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "../Pages/Footer/Footer";
 import Navbar from "../Pages/Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
